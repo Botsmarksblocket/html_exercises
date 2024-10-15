@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture with a link and a table</title>
+    <style>
+      body {
+        background-color: rgb(241, 235, 207);
+      }
+      figure {
+        text-align: center; /* Centrera figuren och dess innehåll */
+        margin: 20px; /* Lägg till lite marginal */
+      }
+      img {
+        max-width: 100%; /* Gör bilden responsiv */
+        height: auto; /* Bevara bildens proportioner */
+      }
+      figcaption {
+        font-size: 1.2em; /* Justera storleken på bildens beskrivning */
+        margin-top: 10px; /* Lägg till lite utrymme ovanför beskrivningen */
+      }
+      table,
+      th,
+      td {
+        min-height: 130px;
+        margin: 20px auto;
+        border-style: ridge;
+      }
+      th,
+      td {
+        font-size: 1.3em;
+        border-style: groove;
+      }
+      td:hover,
+      th:hover {
+        background-color: #8dc490;
+      }
+    </style>
+  </head>
+  <body>
+    <figure>
+      <a href="https://sv.wikipedia.org/wiki/Katt" target="_blank">
+        <img
+          src="https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg"
+          alt="Picture of two cats"
+        />
+      </a>
+      <figcaption>Click on the picture to learn more about cats!</figcaption>
+    </figure>
+    <h1 style="text-align: center">Here is a table</h1>
+
+    <table>
+      <tr>
+        <th></th>
+        <th>9am</th>
+        <th>10am</th>
+        <th>11am</th>
+        <th>12am</th>
+      </tr>
+      <tr>
+        <th>Monday</th>
+        <td colspan="2">Geopgrahy</td>
+        <td>Math</td>
+        <td>Art</td>
+      </tr>
+      <tr>
+        <th>Tuesday</th>
+        <td colspan="3">Gym</td>
+        <td>Home Ec</td>
+      </tr>
+    </table>
+  </body>
+</html>

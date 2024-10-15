@@ -1,0 +1,110 @@
+/* ------- Page layout ------------------------------ */
+
+/*
+See base.xml (just before the definition of `lyspage`) for a
+general explanation.
+*/
+
+/* Main exists as a barries between the template, and our
+ * content. Hence the display: contents.
+ * (The navbar is in the template, while the columns are in
+ * the page, and the need to share a grid)
+ */
+
+#main {
+	display: contents;
+}
+
+#content {
+	display: grid;
+	grid-template-columns: auto 1fr 1fr;
+	grid-template-rows:    auto 1fr auto;
+}
+
+#sidebar {
+	grid-column: 1;
+	grid-row: 1 / span 3;
+}
+
+#main #intro {
+	grid-column: 2 / span 2;
+	grid-row: 1;
+}
+
+#main #feed {
+	/* background-color: pink; */
+	grid-column: 3;
+	grid-row: 2;
+}
+
+#main #static {
+	/* background-color: lightblue; */
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#footer {
+	grod-row: 3;
+	grid-column: 2 / span 2;
+}
+
+@media (min-width: 1000px) {
+	.sidebar-toggle {
+		display: none;
+	}
+}
+
+@media (max-width: 1000px) {
+	#sidebar {
+		position: fixed;
+		left: 0px;
+		border-right: var(--sidebar-border-width) solid white;
+	}
+
+	#content {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#main #intro {
+		grid-column: 1 / span 2;
+	}
+
+	#main #feed {
+		grid-column: 2;
+	}
+
+	#main #static {
+		grid-column: 1;
+	}
+
+	#footer {
+		grid-column: 1 / span 2;
+	}
+}
+
+@media (max-width: 650px) {
+
+	#content {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto;
+	}
+
+	#main #feed {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	#main #static {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	#main #intro {
+		grid-column: 1;
+	}
+
+	#footer {
+		grid-row: 4;
+		grid-column: 1;
+	}
+}

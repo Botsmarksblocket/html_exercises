@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/2-column.css" />
+    <script src="/static/script.js"></script>
+
+    <title>Lysator</title>
+    <link
+      rel="shortcut"
+      type="image/svg+xml"
+      href="/static/image/lyslogo.svg"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <style id="js-styles"></style>
+
+    <meta
+      name="description"
+      content="Lysators starsida. En generell introduktion till föreningen, samt information om kommande händelser."
+    />
+  </head>
+  <body>
+    <div id="root">
+      <div class="noprint" id="header-top">
+        <span class="float-right flag">
+          <a href="index_en.html"
+            ><img src="/static/image/en_flag.svg" alt="English information"
+          /></a>
+        </span>
+      </div>
+
+      <div id="content">
+        <nav class="noprint hide-sidebar" id="sidebar">
+          <button class="sidebar-toggle" onclick="toggle_sidebar()">☰</button>
+          <div class="scroll-helper">
+            <div id="sidebar-content">
+              <a href="/">
+                <img
+                  src="/static/image/lyslogo.svg"
+                  onerror="this.src='/static/image/logo.png'"
+                  alt="Lysators Logo"
+                />
+
+                <h1>Datorföreningen Lysator</h1>
+              </a>
+              <div id="tree-menu">
+                <ul>
+                  <li>
+                    <a href="/foreningen"> Föreningen </a>
+                    <ul>
+                      <li>
+                        <a href="/foreningen/blimedlem"> Bli medlem </a>
+                        <ul></ul>
+                      </li>
+
+                      <li>
+                        <a href="/foreningen/lokaler"> Lokaler </a>
+                        <ul>
+                          <li>
+                            <a href="/foreningen/lokaler/lib"> ~/lib </a>
+                            <ul></ul>
+                          </li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <a href="/foreningen/stadgar"> Stadgar </a>
+                        <ul></ul>
+                      </li>
+
+                      <li>
+                        <a href="/foreningen/protokoll"> Protokoll </a>
+                        <ul></ul>
+                      </li>
+
+                      <li><a href="/inhysningar">Inhysningar</a></li>
+
+                      <li>
+                        <a href="/foreningen/grafisk-profil">
+                          Grafisk profil
+                        </a>
+                        <ul></ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/lysdocs"> 🗎 LysDocs </a>
+                    <ul></ul>
+                  </li>
+
+                  <li>
+                    <a href="/lyskom"> LysKOM </a>
+                    <ul>
+                      <li>
+                        <a href="https://jskom.lysator.liu.se"
+                          >LysLysKOM via jskom</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/sponsorer"> Sponsorer </a>
+                    <ul></ul>
+                  </li>
+
+                  <li>
+                    <a href="/projekt"> Projekt </a>
+                    <ul>
+                      <li>
+                        <a href="/projekt/historieprojektet">
+                          Historieprojektet
+                        </a>
+                        <ul></ul>
+                      </li>
+
+                      <li>
+                        <a href="/projekt/../upplysning"> UppLYSning </a>
+                        <ul></ul>
+                      </li>
+
+                      <li>
+                        <a href="/projekt/../runeberg"> Projekt Runeberg </a>
+                        <ul></ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="/planet"> Planet Lysator </a>
+                    <ul></ul>
+                  </li>
+
+                  <li>
+                    <a href="https://datorhandbok.lysator.liu.se"
+                      >Datorhandboken</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <main id="main">
+          <header id="intro">
+            <article class="card">
+              <h1 style="text-align: center">Välkommen till Lysator</h1>
+
+              <p>
+                Lysator är en akademisk datorförening vid Linköpings
+                universitet. Dess syfte är att ge medlemmarna möjlighet att
+                utforska datorer och datavetenskap. Alla som studerar eller
+                arbetar vid Linköpings universitet kan bli medlemmar.
+              </p>
+            </article>
+          </header>
+
+          <section class="feed" id="feed">
+            <h2>På gång</h2>
+
+            <article class="card">
+              <h3>UppLYSning: Grunderna i SSH!</h3>
+
+              <p>2024-10-15 12:15 | Lokal: C1</p>
+              <p>
+                Se
+                <a href="/upplysning/">UppLYSningssidan för mer information!</a>
+              </p>
+            </article>
+          </section>
+
+          <section class="feed" id="static">
+            <h2>Allmän information</h2>
+
+            <article class="card">
+              <h3>Stående aktiviteter</h3>
+
+              <h4>Pizzahack</h4>
+
+              Varje onsdagkväll samlas de som känner för det, äter pizza, samt
+              håller på med datorer i
+              <a href="/foreningen/lokaler">ˇ (haček)</a>. Beställningen
+              påbörjas 17:30, och skickas när vi tröttnat på att vänta.
+
+              <h4>Fredagsfika</h4>
+              Fredagar från 15.00 bjuds det på fika i
+              <a href="/foreningen/lokaler"> ˇ </a>.
+            </article>
+
+            <article class="card">
+              <h3>Projekt Runeberg</h3>
+
+              <p>
+                Projekt Runeberg arbetar på frivillig grund med att skapa fria,
+                elektroniska utgåvor av klassisk nordisk litteratur och göra dem
+                öppet tillgängliga över Internet. Vi har redan Internets största
+                samling av nordisk litteratur. Med hjälp av frivilliga som dig,
+                har vi målsättningen att fördubbla samlingen årligen.
+              </p>
+
+              <p>
+                Besök <a href="http://www.runeberg.org/">Projekt Runeberg</a>.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Chatt</h3>
+
+              <p>
+                Kom och chatta med oss! Vi stöder flera olika chattformat välj
+                din favorit av nedanstående! (Notera att IRC inte håller loggar,
+                så de kanalerna kommer se aningen tomma ut)
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://web.libera.chat/?randomnick=1&amp;channels=#lysator"
+                    >#lysator @ Libera.chat ej bryggad</a
+                  >
+                </li>
+                <li>
+                  <a href="https://matrix.to/#/#lysator-b:matrix.org">
+                    Matrix (ingår i brygga)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://web.libera.chat/?randomnick=1&amp;channels=#lysator-bridge"
+                  >
+                    IRC (ingår i brygga)
+                  </a>
+                </li>
+                <li>
+                  <a href="https://discord.gg/QrYTjV2NGA">
+                    Discord (ingår i brygga)
+                  </a>
+                </li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>LysKOM</h3>
+
+              <p>
+                LysKOM är ett konferenssystem, eller en slags elektronisk
+                anslagstavla, som är ett av de viktigaste kommunikationsmedlen
+                inom Lysator. Här kan du få veta vad som händer i föreningen och
+                du kan diskutera allt mellan himmel och jord, mer eller mindre
+                seriöst.
+              </p>
+
+              <p>Läs mer om <a href="/lyskom/">LysKOM</a>.</p>
+            </article>
+
+            <!--
+
+	
+	
+	
+	
+		<article class='card'>
+			
+			
+				<h3>Planet Lysator</h3>
+			
+			
+    <p>Vilka är de där lysiterna, och vad tänker de egentligen? Planet Lysator samlar ihop inlägg från olika medlemmars bloggar, och självklart får alla medlemmar vara med!</p>
+
+<p>Besök <a href="http://planet.lysator.liu.se/">Planet Lysator</a>.</p>
+
+		</article>
+	
+
+-->
+          </section>
+
+          <span class="lock noprint"
+            >🔒<span class="hoverdata"
+              >Sidan skyddas av
+              <a href="//www.lysator.liu.se/rijndael/?padlock"
+                >rijndael-cbc@lysator.liu.se</a
+              ></span
+            ></span
+          >
+        </main>
+        <footer id="footer">
+          <div>
+            Frågor om webbsidan:
+            <a href="mailto:www@lysator.liu.se">www@lysator.liu.se</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

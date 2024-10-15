@@ -1,0 +1,252 @@
+/* -------------------------------------------------- */
+
+:root {
+	/* Sidebar width experimentally set.
+	 * Might need to change if content changes */
+	--sidebar-width: 16em;
+	--sidebar-margin: 1ex;
+
+	--sidebar-animation-time: 0.3s;
+	--sidebar-border-width: 3px;
+
+	--sidebar-toggle-button-size: 2em;
+}
+
+body {
+	font-family: monospace;
+	margin: 0;
+}
+
+p {
+	font-family: arial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: monospace;
+}
+
+/* ------- General design --------------------------- */
+
+.card {
+	margin: 1em;
+	max-width: 80ch;
+	/* We technically want width: 100% + margin, but something
+	 * something flexbox */
+	width: 95%;
+	/* width: 80ch; */
+}
+
+header .card {
+	max-width: unset;
+	width: unset;
+}
+
+h1,
+h3 {
+	background-color: black;
+	color: yellow;
+	margin-top: 0;
+	padding: 1ex;
+	border-radius: 1ex;
+}
+
+section h2 {
+	background-color: black;
+	color: yellow;
+	text-align: center;
+	width: 100%;
+}
+
+#content section {
+	padding: 1em;
+}
+
+#content section h2 {
+	padding: 0 !important;
+}
+
+#content .feed {
+	padding: 0 !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#footer {
+	padding: 1em;
+}
+
+#footer > div {
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	border-top: 1px solid gray;
+}
+
+/* ------- Language flag stuff ---------------------- */
+
+#header-top {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5em;
+}
+
+.flag img {
+	max-height: 1.3em;
+}
+
+/* ------ Print changes ----------------------------- */
+
+@media print {
+	.noprint {
+		display: none;
+	}
+
+	/* These href matches in order, with later taking prcedence.
+	 * So the "raw" href MUST be first */
+
+	#main a[href]::after {
+		content: " (lysator.liu.se/" attr(href) ")";
+	}
+
+	#main a[href^="/"]::after {
+		content: " (lysator.liu.se" attr(href) ")";
+	}
+
+	#main a[href^="//"]::after {
+		content: " (https:" attr(href) ")";
+	}
+
+	#main a[href^="http"]::after {
+		content: " (" attr(href) ")";
+	}
+
+}
+
+
+/* ------ Sidebar ----------------------------------- */
+
+/* Outerermost container for sidebar. Ensures that it's the
+ * full height of the screen, and that it has a proper
+ * background
+ *
+ * The sidebar is designed to stay put when the rest of the
+ * page is scrolled, but allow internal scrolling.
+ *
+ * It also jumps between being the leftmost part of the
+ * page, and being a slide-over sidebar, depending on the
+ * page width.
+ * */
+#sidebar {
+	background-color: black;
+	text-align: center;
+	min-height: 100vh;
+	transition-property: left;
+	transition-duration: var(--sidebar-animation-time);
+}
+
+/* Div helping the sidebar scroll correctly */
+.scroll-helper {
+	position: relative;
+	height: auto;
+	padding: 0;
+	margin: 0;
+	width: var(--sidebar-width);
+}
+
+/* The actuall contents of the sidebar */
+#sidebar-content {
+	position: fixed;
+	overflow-y: auto;
+	height: 100%;
+	width: var(--sidebar-width);
+	padding: var(--sidebar-margin);
+	box-sizing: border-box;
+}
+
+#sidebar h1 {
+	font-size: 12pt;
+}
+
+/* General styling for items in the sidebar follows 
+ * */
+
+#sidebar img {
+	width: 80%;
+}
+
+#sidebar a {
+	color: yellow;
+}
+
+#sidebar li a:hover {
+	background-color: brown;
+}
+
+#sidebar ul {
+	text-align: left;
+	list-style: none;
+	font-weight: bold;
+	padding-left: 0;
+}
+
+#sidebar ul ul {
+	padding-left: 1.5em;
+}
+
+#sidebar a {
+	text-decoration: none;
+}
+
+.sidebar-toggle {
+	position: absolute;
+	right: calc(-1 * var(--sidebar-toggle-button-size));
+	width:  var(--sidebar-toggle-button-size);
+	height: var(--sidebar-toggle-button-size);
+	display: block;
+	border-radius: 0 0 1ex 0;
+	border: none;
+	background-color: black;
+	color: white;
+	font-size: 150%;
+	border-right:  var(--sidebar-border-width) solid white;
+	border-bottom: var(--sidebar-border-width) solid white;
+}
+
+.sidebar-toggle:active {
+	color: yellow;
+}
+
+/* ------ Rijndael Easteregg ------------------------ */
+
+.lock {
+	display: block;
+	position: fixed;
+	right: 1ex;
+	bottom: 1ex;
+	background-color: beige;
+	padding: 1ex;
+	border-radius: 1ex;
+}
+
+.lock .hoverdata {
+	display: none;
+	font-size: 8pt;
+}
+
+.lock:hover .hoverdata {
+	display: inline;
+}
+
+/* ------ Debugging items --------------------------- */
+
+/*
+#main > * {
+	background-color: pink;
+}
+
+#footer {
+	background-color: lightblue;
+}
+*/
