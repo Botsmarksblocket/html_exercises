@@ -1,0 +1,22 @@
+table,
+th,
+td {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+th {
+  font-weight: 600;
+  background-color: #1995AD
+}
+td {
+  background-color: #A1D6E2
+}
+.white {
+  background-color: white;
+}
+body {
+  background-color: #F1F1F2
+}
