@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Prioritet Test</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <h1>Testa CSS-prioritet</h1>
+
+    <!-- Inline-CSS överrider klass- och ID-selektorer -->
+    <p  id="text1" style="color: rgb(255, 170, 13)">
+      Denna text använder inline-CSS och ska vara orange.
+    </p>
+
+    <!-- ID-selektor har högre prioritet än klass-selektor, men !important slår båda -->
+    <p class="text important-text" id="text1">
+      Denna text använder !important och ska vara röd.
+    </p>
+
+    <!-- Klass-selektor används om ingen annan stil är definierad -->
+    <p class="text">Denna text använder klass-selektor och ska vara blå.</p>
+  </body>
+</html>
+
+<!--Specificity rules: !important-> Inline -> ID -> Class -> Top-to-bottom-->

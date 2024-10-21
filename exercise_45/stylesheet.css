@@ -1,0 +1,16 @@
+        /* Klass-selektor */
+        .text {
+            color: blue;
+        }
+
+
+        /* ID-selektor */
+        #text1 {
+            color: green;
+        }
+
+
+        /* !important */
+        .important-text {
+            color: red !important;
+        }
