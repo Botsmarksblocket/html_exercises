@@ -1,1 +1,1 @@
-#Some small projects for learning HTML
+#Some small projects for learning HTML, CSS and javascript.
