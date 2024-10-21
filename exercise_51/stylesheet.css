@@ -1,0 +1,30 @@
+body {
+  background-color: beige;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 2px solid black;
+  text-align: center;
+}
+.sidemenu {
+  flex: 25%;
+  background-color: rgba(219, 0, 0, 0.486);
+  padding: 20px;
+  margin-right: 10px;
+}
+.content {
+  flex: 50%;
+  background-color: lightblue;
+  padding: 20px;
+}
+.information {
+  flex: 25%;
+  background-color: green;
+  padding: 20px;
+  margin-left: 10px;
+}
