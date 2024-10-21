@@ -1,0 +1,12 @@
+p {
+  color: blue;
+}
+.highlight {
+  background-color: yellow;
+}
+#important {
+  font-weight: bold;
+}
+a:hover {
+  color: red;
+}
