@@ -22,7 +22,7 @@
         <label for="gender">Gender</label>
         <input type="radio" id="male" name="gender" value="male" />
         <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="male" />
+        <input type="radio" id="female" name="gender" value="female" />
         <label for="female">Female</label>
         <br />
         <br />
@@ -30,13 +30,31 @@
         <label for="salutation">Salutation</label>
         <select name="salutation" id="salutation">
           <option value="">--SELECT--</option>
-          <option value="Mr">Mr</option>
-          <option value="Mrs">Mrs</option>
-          <option value="Ms">Ms</option>
-          <option value="Mx">Mx</option>
-          <br />
-          <br />
+          <option value="mr">Mr</option>
+          <option value="mrs">Mrs</option>
+          <option value="ms">Ms</option>
+          <option value="mx">Mx</option>
         </select>
+        <br />
+
+        <label for="education">Education</label>
+        <input
+          type="checkbox"
+          id="high-school"
+          name="education"
+          value="high-school"
+        />
+        <label for="high-school">High school</label>
+
+        <input type="checkbox" id="college" name="education" value="college" />
+        <label for="college">College</label>
+
+        <input type="checkbox" id="other" name="education" value="other" />
+        <label for="other">Other</label>
+        <br />
+        <br />
+
+        <button type="submit">Save</button>
       </form>
     </div>
   </body>
